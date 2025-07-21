@@ -1,11 +1,11 @@
 # Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation
 
 <a href="https://arxiv.org/abs/2507.10524"><img src="https://img.shields.io/badge/Paper-arXiv:2507.10524-Green"></a>
-<a href=#bibtex><img src="https://img.shields.io/badge/Paper-BibTex-yellow"></a>
+<a href="https://github.com/raymin0223/mixture_of_recursions?tab=readme-ov-file#-bibtex"><img src="https://img.shields.io/badge/Paper-BibTex-yellow"></a>
 
-**Sangmin Bae<sup>1\*</sup> &nbsp; Yujin Kim<sup>1\*</sup> &nbsp; Reza Bayat<sup>2\*</sup> &nbsp; Sungnyun Kim<sup>1</sup> &nbsp; Jiyoun Ha<sup>3</sup> &nbsp; Tal Schuster<sup>4</sup> &nbsp; Adam Fisch<sup>4</sup>  &nbsp; Hrayr Harutyunyan<sup>5</sup>  &nbsp; Ziwei Ji<sup>4</sup> &nbsp; Aaron Courville<sup>2,6&ddagger;</sup> &nbsp; Se-Young Yun<sup>1&ddagger;</sup>**.  
+**[Sangmin Bae](https://scholar.google.com/citations?user=T5rHY14AAAAJ&hl)<sup>1\*</sup> &nbsp; [Yujin Kim](https://scholar.google.com/citations?user=17yTpxsAAAAJ&hl)<sup>1\*</sup> &nbsp; [Reza Bayat](https://scholar.google.com/citations?hl=ko&user=58et-JMAAAAJ)<sup>2\*</sup> &nbsp; [Sungnyun Kim](https://scholar.google.com/citations?user=DsWny60AAAAJ&hl)<sup>1</sup> &nbsp; [Jiyoun Ha](https://scholar.google.com/citations?hl=ko&user=tTBHK54AAAAJ)<sup>3</sup> &nbsp; [Tal Schuster](https://scholar.google.com/citations?hl=ko&user=oo8QRmIAAAAJ)<sup>4</sup> &nbsp; [Adam Fisch](https://scholar.google.com/citations?user=LYRkQhMAAAAJ&hl)<sup>4</sup>  &nbsp; [Hrayr Harutyunyan](https://scholar.google.com/citations?hl=ko&user=GaCGz8wAAAAJ)<sup>5</sup>  &nbsp; [Ziwei Ji](https://scholar.google.com/citations?hl=ko&user=3l_6H5sAAAAJ)<sup>4</sup> &nbsp; [Aaron Courville](https://scholar.google.com/citations?hl=ko&user=km6CP8cAAAAJ)<sup>2,6&dagger;</sup> &nbsp; [Se-Young Yun](https://scholar.google.com/citations?hl=ko&user=X_IAjb8AAAAJ)<sup>1&dagger;</sup>**.  
 <sup>**1**</sup>KAIST AI &nbsp; <sup>**2**</sup>Mila &nbsp; <sup>**3**</sup>Google Cloud &nbsp;  <sup>**4**</sup>Google DeepMind &nbsp; <sup>**5**</sup>Google Research &nbsp; <sup>**6**</sup>Université de Montréal    
-\*Equal contribution. &nbsp; &ddagger;Corresponding authors.
+\*Equal contribution. &nbsp; &dagger;Corresponding authors.
 
 <p align="left">
 <img width="700" src="asset/mor_fig1.png">
@@ -31,7 +31,7 @@ Previous work tackled these challenges individually:
 
 
 Our new research **[[MoR](https://arxiv.org/abs/2507.10524)]** introduces a **unified framework** that directly tackles both the missing KV cache and batched inference issues. We achieve this with a ✨ **routing mechanism** trained end-to-end effectively, which dynamically assigns the optimal recursion depth to each token. We further enhance this by introducing a ✨ **recursion-wise KV caching strategy** that selectively stores KV pairs, resolving the missing cache problem while optimizing memory usage.
-We achieve up to **2× higher inference throughput** compared to standard transformers at similar accuracy, while also reducing total training FLOPs and memory requirements.
+We achieve up to **2× greater inference throughput** compared to standard transformers at similar accuracy, while also reducing total training FLOPs and memory requirements.
 
 
 
@@ -130,7 +130,7 @@ Moreover in case of KV sharing, we computed all sequences against a shared KV ca
 
 ### 👉 Configuration Generation
 
-To streamline the creation of training and evaluation scripts, we made an automated Python utility: [generate_pretrain_eval_fewshot_configs.py](https://github.com/raymin0223/mixture_of_recursions/tree/main/util/generate_pretrain_eval_fewshot_configs.py). This script will generate configurations based on `example.yaml` files located under [conf/pretrain](https://github.com/raymin0223/mixture_of_recursions/tree/main/conf/pretrain) or [conf/eval_fewshot](https://github.com/raymin0223/mixture_of_recursions/tree/main/conf/eval_fewshot). By specifying your custom config name and providing arguments, the script will automatically generate a YAML file for your configuration.
+To streamline the creation of training and evaluation scripts, we made an automated Python utility: [generate_pretrain_eval_fewshot_configs.py](https://github.com/raymin0223/mixture_of_recursions/tree/main/util/generate_pretrain_eval_fewshot_configs.py). By specifying your custom config name and providing arguments, the script will automatically generate a YAML file for your configuration. This script will generate configurations based on `example.yaml` files located under [conf/pretrain](https://github.com/raymin0223/mixture_of_recursions/tree/main/conf/pretrain) or [conf/eval_fewshot](https://github.com/raymin0223/mixture_of_recursions/tree/main/conf/eval_fewshot). 
 
 To generate a configuration, simply run:
 
