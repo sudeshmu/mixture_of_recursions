@@ -88,7 +88,7 @@ Follow these steps to download and prepare the dataset:
     Execute the provided script to download the `fineweb-edu-dedup` dataset.
 
     ```bash
-    bash lm_dataset/download_pretraining_corpus.sh
+    bash lm_dataset/download_scripts/download_fineweb-edu-dedup.sh
     ```
 
 
